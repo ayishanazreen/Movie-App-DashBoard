@@ -1,0 +1,41 @@
+@import url('../../styles/variables.css');
+.movie-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    padding: 52px 156px 52px 156px;
+    gap: 60px;
+    background-color: rgba(0, 0, 0, 0.822);
+ 
+}
+
+.movie-light-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  padding: 52px 156px 52px 156px;
+  gap: 60px;
+  background-color: rgb(255, 255, 255);
+   
+}
+.movie-item{
+    width: 200px;
+    text-align: center;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    color: #dfd4d4;
+    margin-left: 5px;  
+}
+
+.movie-item img{
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  border-bottom: 2px solid #444;
+}

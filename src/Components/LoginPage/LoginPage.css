@@ -1,0 +1,50 @@
+@import url('../../styles/variables.css');
+.main-container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(moviebg.png);
+    background-size: contain;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.main-container::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color:var(--bg-color);
+    z-index: -1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.dark-container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(moviebg.png);
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.dark-container::before{
+    content: '';
+    height: 1099px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(255, 255, 255, 0.158);
+    z-index: -1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
