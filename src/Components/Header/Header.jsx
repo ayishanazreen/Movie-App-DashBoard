@@ -19,15 +19,18 @@ const Header = () => {
     navigate("/");
   }
   return (
-    <div>
+    <>
       <header className={isMode? 'header-dark-container': 'header-light-container'}>
-        <h1>Debug Media</h1>
+        <div className='title-div'>
+        <img src='/film-icon.webp' className='icon-movie'></img>
+        <h1 className='heading'>FilmConnect</h1>
+        </div>
         <div className='btns-div'>
         <button className={isMode ? 'light-mode-btn' : "dark-mode"} onClick={ToggleMode}> {isMode? <MdDarkMode size={28}/> : <MdLightMode size={28}/> } </button>
         {buttonShow ? <button className='logout-btn' onClick={onHandleLogout}>Log Out</button>: ''}
         </div>
       </header>
-    </div>
+    </>
   )
 }
 export default Header;

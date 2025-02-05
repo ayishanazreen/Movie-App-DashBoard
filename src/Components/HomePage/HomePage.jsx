@@ -43,6 +43,7 @@ const HomePage = () => {
       }
     }, [searchInput]);
   return (
+    <div className='main-content'>
     <div className={isMode? 'main-home-container': 'home-dark-container'}>
       <Header/>
       <Search onHandleSearch={onHandleSearch} 
@@ -55,6 +56,7 @@ const HomePage = () => {
       ) : (
         <MovieList movies={stateMovies} />
       )}
+      </div>
       <Footer/>
     </div>
   )

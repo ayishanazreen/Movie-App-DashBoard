@@ -4,7 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.726);
+    background-color: rgba(0, 0, 0, 0.89);
+  
 }
 
 .search-light-container{
@@ -13,6 +14,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
+  
     /* background-color: rgba(255, 255, 255, 0.87); */
 
 }

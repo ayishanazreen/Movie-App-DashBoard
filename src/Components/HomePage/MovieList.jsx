@@ -12,7 +12,7 @@ const MovieList = ({movies}) => {
   }
 
   return (
-    <div>
+    <div className={ isMode? 'overlay-div-light' :'overlay-div'}>
       <div className={isMode? "movie-light-container" : 'movie-container'}>
         {movies.map((movie)=>(
             <div key={movie.id} className='movie-item'>
