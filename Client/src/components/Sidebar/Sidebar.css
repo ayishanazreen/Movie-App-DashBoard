@@ -1,0 +1,127 @@
+.layout{
+    background-color: black;
+    z-index: 1000;
+    width: 350px;
+    background-color: #e76060;
+    color: white;
+    padding-top: 10px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* overflow-y: auto; */
+    transition: left 0.3s ease-in-out;
+}
+.layout .close-btn{
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.layout.show{
+    left:0px;
+}
+
+.layout.hide{
+    left:-280px
+}
+
+
+.sidebar{
+    padding-top: 50px;
+}
+.sidebar ul{
+    margin-top: 30px;
+}
+
+.sidebar ul li{
+    margin-bottom: 50px;
+    font-size: 40px;
+    list-style: none;
+    width: 350px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul li.focused{
+   background-color:#df4a4a;
+}
+
+.sidebar li  a{
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .layout {
+        width: 40%;
+    }
+
+    .sidebar ul li {
+        font-size: 25px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+
+    .layout .close-btn {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .layout {
+        width: 70%;
+    }
+    .sidebar ul li {
+        font-size: 22px;
+        height: 60px;
+    }
+
+    .layout .close-btn {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .layout {
+        width: 90%;  /* Make the sidebar full-width */
+        padding: 10px;   /*  Add some padding */
+        position: fixed;
+    }
+
+    .layout .close-btn {
+        position: absolute;  /* Ensure it's positioned correctly */
+        top: 10px;
+        right: 10px;  /* Always visible on the right */
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: #e76060;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1100; /* Ensure it's on top */
+    }
+  
+    
+}
+
+
+
+
+
+

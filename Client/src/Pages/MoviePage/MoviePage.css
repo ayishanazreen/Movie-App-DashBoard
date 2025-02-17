@@ -1,0 +1,13 @@
+.movie-container{
+    min-height: auto;
+    /* background-color: #dfb5a4; */
+    flex-grow: 1;
+}
+
+.movie-container h1{
+margin: 20px;
+text-align: center;
+font-size: 50px;
+padding-top: 20px;
+}
+

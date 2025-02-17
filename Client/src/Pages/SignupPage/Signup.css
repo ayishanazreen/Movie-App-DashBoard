@@ -1,0 +1,9 @@
+.signup-page-div{
+    background-image: url(bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;  
+} 

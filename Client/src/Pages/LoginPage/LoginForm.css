@@ -1,0 +1,88 @@
+
+
+.movie-login{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+ }
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 450px;
+    min-height:430px;
+    /* top: 204px;
+    left:735px; */
+    border-radius: 8px;
+     background: #0a0a0ab5;
+    position: relative;
+    z-index: 2;
+    box-shadow: 2px 2px 5px #0c0c0c75;
+}
+
+.login-items{
+   width: 314px;
+   height: 336px;
+   padding: 0px 0px 38px 0px;
+   color: white;
+   margin: 5px;
+}
+
+.login-items h1{
+    font-family: "Roboto", serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.login-items input{
+    padding: 10px;
+    margin-top: 10px;
+    background: #333333;
+    width: 314px;
+    height: 50px;
+    top: 2px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    color: wheat;
+}
+
+
+.login-items button{
+        width: 100px;
+        height: 50px;
+        align-self: center;
+        background-color: #161515;
+        color: white;
+        font-size: 20px;
+      
+}
+
+.login-items button:hover {
+        background-color: #e76060;
+        } 
+
+
+.login-items p{
+    font-family: "Roboto", serif;
+    text-align: right;
+    margin-top: 5px;
+}
+.login-items .signup-link{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+@media (max-width: 730px){
+    .movie-login{
+        margin:10px;
+    }
+}

@@ -1,0 +1,130 @@
+.home-content{
+    display: flex;
+     flex-wrap: wrap;
+     padding: 10px;
+     gap: 15px;
+     min-height: 100vh;
+}
+
+.movie-cards{
+ width: 100%;
+ max-width: 300px;
+ max-height: 500px;
+ background-color: rgb(75 71 71);
+ /* height: auto; */
+ border: 2px solid #080808;
+ border-radius: 10px;
+ padding: 5px;
+ color: rgb(245, 241, 235);
+ box-shadow: 2px 2px 5px rgb(14 13 13 / 38%);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.movie-image{
+    width:60%;
+    max-height:400px;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.movie-cards h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.movie-cards p{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.editBtn, .deleteBtn{
+    width:50px;
+    height: 30px;
+    background-color: #ec9090;
+}
+
+
+.btns-div{
+    display: flex;
+    padding: 5px;
+    padding-right: 30px;
+    gap: 15px;
+}
+
+
+.logout-btn {
+    width: 86px;
+    height: 55px;
+    border-radius: 20px; 
+    border: 1px solid #FFFFFF;
+    background: black;
+    color: #ff9a9c;
+}
+
+.laterBtn{
+    background: none;
+    color: #ec9090;
+}
+
+
+.laterBtn:hover{
+    background-color: aliceblue;
+}
+@media screen and (max-width: 1024px) {
+    .movie-cards {
+        width: 30%; /* Two cards per row on tablets */
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .movie-cards {
+        width: 100%; /* Single column layout on small screens */
+    }
+
+    .movie-cards h1 {
+        font-size: 32px; /* Smaller heading */
+    }
+
+    .movie-cards p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .movie-cards {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .movie-cards h1 {
+        font-size: 24px;
+    }
+
+    .movie-cards p {
+        font-size: 18px;
+    }
+    
+    .btns-div {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .logout-btn {
+        width: 70px;
+        height: 40px;
+        font-size: 13px;
+    }
+}
+/* 
+@media screen and (max-width: 370px){
+    .movie-cards {
+        width: 90%;
+        /* padding: 5px; */
+    
+
+
+

@@ -1,0 +1,31 @@
+
+.home-container{
+  width: calc(100% - 70px); /* Adjust width when sidebar is visible */
+  min-height: 100vh;
+  height: 100%;
+  margin-left: 70px; 
+  transition: all 0.3s ease;
+}
+
+.home-container.move{
+  width: calc(100% - 350px); /* Adjust width when sidebar expands */
+  margin-left: 350px;
+}
+
+.main-div {
+  
+  display: flex; /* Ensure it stretches properly */
+  transition: all 0.3s ease;
+}
+
+.main-div h1{
+  padding: 10px;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.username{
+  font-style: italic;
+  color: #e76060;
+}
