@@ -2,7 +2,7 @@
 
 <h3>📌 Overview</h3>
 
-The Movie Dashboard Application is a dynamic web application that provides users with an interactive experience to explore movies, view details, and manage their favorite films. Built with React.js for the frontend and powered by Node.js & Express.js for the backend, the application fetches real-time movie data from an external API.
+The Movie Dashboard Application is a dynamic web application that provides users with an interactive experience to explore movies, view details, and manage their favorite films. Built with React.js for the frontend and powered by Node.js & Express.js for the backend, the application fetches real-time movie data from an User. Can also add our favourite movies into the database and also into the watch list.
 
 <h3>🚀 Features</h3>
 
