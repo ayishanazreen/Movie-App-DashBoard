@@ -18,6 +18,9 @@ The Movie Dashboard Application is a dynamic web application that provides users
 
 📊 Movie Dashboard
 
+📃Pagination and filter $ sorting technique in movies
+
+
 <h3>🛠️ Technologies Used</h3>
 
 <h4>Frontend:</h4>
@@ -34,13 +37,9 @@ React Router (Navigation)
 
 Node.js & Express.js (Server & API Development)
 
-MongoDB (Database for user favorites)
+MongoDB (Database for user details and movies)
 
 JWT Authentication (User Login System)
-
-External API:
-
-The Movie Database (TMDb) API - Fetches real-time movie data
 
 <h2>🎯 Installation & Setup</h2>
 
@@ -88,23 +87,9 @@ Start the Frontend:
 
  cd frontend
  npm start
+ 
 
-The app will be available at http://localhost:3000
-
-📸 Screenshots
-
-
-
-<h3>🛠️ Upcoming Features</h3>
-
-📑 User Reviews & Ratings
-
-📃Pagination and filter $ sorting technique in movies
-
-📽️ Movie Trailers Integration
-
-
- <h2>Screenshots: </h2>
+<h2>📸 Screenshots</h2>
 
  <h3>Login Page</h3>
  
@@ -160,6 +145,11 @@ The app will be available at http://localhost:3000
   
 
  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/EditMovie.png?raw=true)
+
+ <h3>Filter the movies based on genres and star ratings and incorporate Pagination logic</h3>
+
+ 
+  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/addFilterLogic.png?raw=true)
   
 
  
