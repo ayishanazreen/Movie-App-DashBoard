@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { useParams, useNavigate } from 'react-router-dom';
 
-const API_URL = "http://localhost:3006";
+const API_URL =import.meta.env.VITE_API_URL;
 
 const EditForm = () => {
   const { id } = useParams();

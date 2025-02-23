@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import {  toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const API_URL="http://localhost:3006/users"
+const API_URL =import.meta.env.VITE_API_URL;
 
  
 const LoginForm = () => {

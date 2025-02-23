@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const API_URL="http://localhost:3006";
+const API_URL =import.meta.env.VITE_API_URL;
 
 const GenreList = () => {
     const [genres, setGenres]=useState([]);

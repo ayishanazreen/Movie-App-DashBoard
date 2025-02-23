@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useRef } from 'react';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 
-const API_URL="http://localhost:3006";
+const API_URL =import.meta.env.VITE_API_URL;
 
 const MovieForm = () => {
     const [imagePreview, setImagePreview]=useState(null);

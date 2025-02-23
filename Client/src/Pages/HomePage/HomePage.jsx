@@ -9,7 +9,7 @@ import SideBarWrapper from '../../components/Sidebar/SideBarWrapper';
 import MovieList from './MovieList';
 import axios from 'axios';
 import MovieHomePage from '../MoviePage/movieHomePage';
-const API_URL="http://localhost:3006";
+const API_URL =import.meta.env.VITE_API_URL;
 
 const HomePage = (req, res) => {
   // const {auth}=useContext(AuthContext)
