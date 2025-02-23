@@ -11,14 +11,9 @@ import axios from 'axios';
 import MovieHomePage from '../MoviePage/movieHomePage';
 const API_URL =import.meta.env.VITE_API_URL;
 
-const HomePage = (req, res) => {
-  // const {auth}=useContext(AuthContext)
-  // if(!auth) 
-  //   return <Navigate to='/login'/>
-const [username, setUsername]=useState();
-const token=localStorage.getItem("token");
-
-
+const HomePage = () => {
+    const [username, setUsername]=useState();
+    const token=localStorage.getItem("token");
 
   useEffect(()=>{
     const fetchProfile =async()=>{
@@ -27,7 +22,6 @@ const token=localStorage.getItem("token");
         authorization:`Bearer ${token}`
       }
     });
-    //console.log(response.data.user,"response on fetchprofile ==================");
     setUsername(response.data.user.name)
     }
 

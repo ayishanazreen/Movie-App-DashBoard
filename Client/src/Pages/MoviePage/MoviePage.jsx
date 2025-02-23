@@ -20,7 +20,6 @@ const MoviePage = () => {
     <div className="movie-container"> 
       <SideBarWrapper>
       <Header/>
-  
        <MovieForm/>
         <ToastContainer position="top-center" autoClose={3000}/>
         <Footer/>

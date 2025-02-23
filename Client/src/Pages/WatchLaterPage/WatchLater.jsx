@@ -71,10 +71,7 @@ const handleRemoveWatchLater= async(id)=>
               Authorization: `Bearer ${token}`
             }
           });
-          console.log("response fron watch later backend on get request",response);
           const fetchedMovies=response.data.user.watchLater;
-         // console.log(fetchedMovies,"fetched movies ================")
-        
           setMovies(fetchedMovies? fetchedMovies : <p>No Movies selected</p>);
         } catch (error) {
           console.log(error)

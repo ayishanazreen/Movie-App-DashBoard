@@ -14,14 +14,12 @@ export const SignupForm = () => {
  
     const handleSignup = async()=>{
       try {
-        console.log(name);
       const response=await axios.post(`${API_URL}/users/signup`, {
         name,
         email,
         username,
         password
       });
-      console.log(response);
       if(response.status===201){
         navigate("/home");
       }

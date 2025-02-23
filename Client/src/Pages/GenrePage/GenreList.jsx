@@ -16,7 +16,7 @@ const GenreList = () => {
         setGenreInput(event.target.value)
     }
 
-    const handleAddGenre= async(req,res)=>{
+    const handleAddGenre= async()=>{
         if(!genreInput.trim()){
             console.log("genre cannot be empty");
             return;
@@ -33,7 +33,6 @@ const GenreList = () => {
         }
         try {
             const response=await axios.post(`${API_URL}/genre`, {genre:genreInput})
-            console.log(response.data)
             fetchGenre();
             setGenreInput("");
             toast.success("Genre Added Successfully", {
@@ -47,10 +46,9 @@ const GenreList = () => {
         }
     }
 
-    const fetchGenre =async(req,res)=>{
+    const fetchGenre =async()=>{
         try {
         const response=await axios.get(`${API_URL}/genre`);
-        console.log(response, "response fron genre backend")
         if (Array.isArray(response.data.genres)){
             setGenres(response.data.genres);
             setExistingGenre(response.data.genres.map((genre) =>genre.name))

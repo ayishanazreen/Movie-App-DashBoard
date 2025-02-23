@@ -5,7 +5,6 @@ import {useLocation} from 'react-router-dom'
 const Header = () => {
   const location =useLocation();
   const isNoBgPage=['/', '/login', '/signup'].includes(location.pathname);
-  console.log(isNoBgPage)
     return (
     <>
         <header className= {isNoBgPage ? 'header-container-nobg' : 'header-container'}>

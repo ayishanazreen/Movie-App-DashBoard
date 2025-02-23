@@ -72,7 +72,6 @@ const LoginForm = () => {
         username,
         password,
       })
-      //console.log(response);
     
       if(response.status===200 && response.data.accessToken){
         localStorage.setItem("token", response.data.accessToken)

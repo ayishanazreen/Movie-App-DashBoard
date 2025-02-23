@@ -5,11 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './MovieList.css';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
-import EditPage from '../EditPage/EditPage';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../context/AuthContext';
 import { MdOutlineWatchLater } from "react-icons/md";
-import { WatchlaterContext } from '../../context/WatchLaterContext';
 const API_URL =import.meta.env.VITE_API_URL;
 const getStars=(rating)=>{
     const stars=[];
@@ -28,7 +26,6 @@ const getStars=(rating)=>{
     
 const MovieList = () => {
   const {logout} =useContext(AuthContext);
-  //const {addToWatchLater}=useContext(WatchlaterContext);
   const [selectedGenre, setSelectedGenre]=useState("");
   const [filterGenre, setFilterGenre]=useState([])
   const [selectedRating, setSelectedRating] = useState([]);
@@ -42,7 +39,6 @@ const MovieList = () => {
 
     const handleSelectedRating = (event) => {
       const value=Number(event.target.value);
-      console.log(value, "====value")
       setSelectedRating((prevRating)=> prevRating.includes(value)? prevRating.filter((r)=> r !== value): [...prevRating, value])
     };
 
@@ -55,7 +51,6 @@ const MovieList = () => {
             Authorization: `Bearer ${token}`
           }
         });
-       //console.log("response fron backend on get request",response.data.movies);
        if (response.data.movies.length > 0) {
         setMovies(response.data.movies); 
         setFilteredMovies(response.data.movies); 
@@ -86,7 +81,6 @@ const MovieList = () => {
         let filtered=[...movies]; 
        
        if(selectedGenre && selectedGenre !== "full-genre"){
-        console.log(selectedGenre)
         filtered= filtered.filter((movie) => movie.genre?.some((g) => g.name === selectedGenre));
        }
       
@@ -135,7 +129,6 @@ const MovieList = () => {
     }
 
     fetchGenre();
-    console.log(filterGenre)
     
     }, []);
 
@@ -153,7 +146,6 @@ const MovieList = () => {
             Authorization: `Bearer ${token}`
           }
         })
-        console.log(response.data.user._id)
         toast.success("Added to Watch Later List")
         
       } catch (error) {
@@ -172,8 +164,6 @@ const MovieList = () => {
         else{
           toast.error("Failed to delete the movie", { autoClose: 3000 });
         }
-        
-        
         
       } catch (error) {
         console.error(error);
