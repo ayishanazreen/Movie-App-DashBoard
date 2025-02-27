@@ -34,8 +34,8 @@ const MovieList = () => {
   const [moviesPerPage] = useState(5);
  
   const navigate=useNavigate();
-    const [movies, setMovies]=useState([])
-
+    const [movies, setMovies]=useState([]);
+    const role=localStorage.getItem("role");
 
     const handleSelectedRating = (event) => {
       const value=Number(event.target.value);
@@ -213,7 +213,7 @@ const MovieList = () => {
                     <div className='btns-div'>
                     <button onClick={()=>handleEdit(movie._id)} className='editBtn'>Edit</button>
                     <button onClick={()=>handleDelete(movie._id)}  className='deleteBtn'>Delete</button>
-                    <button onClick={()=>handleWatchLater(movie._id)}  className='laterBtn'><MdOutlineWatchLater size={25} /></button>
+                     {role ==='user'?  <button onClick={()=>handleWatchLater(movie._id)}  className='laterBtn'><MdOutlineWatchLater size={25} /></button> : " "}
                     </div>
                   
                 </div>

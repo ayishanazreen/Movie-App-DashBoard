@@ -60,32 +60,33 @@ const LoginForm = () => {
   const handleLogin = async()=>{
     try {
       if(!username){
-        toast.error("Username is required");
+        toast.error("Username is required", { autoClose: 3000 });
         return;
       }
 
       if(!password){
-        toast.error("password is required");
+        toast.error("password is required", { autoClose: 3000 });
         return;
       }
-      const response=await axios.post(API_URL,{
+      const response=await axios.post(`${API_URL}/login`,{
         username,
         password,
       })
     
       if(response.status===200 && response.data.accessToken){
         localStorage.setItem("token", response.data.accessToken)
+        localStorage.setItem("role",response.data.role);
         login(response.data.accessToken);
-        toast.success("successfully logged")
+        toast.success("successfully logged", { autoClose: 3000 })
         navigate('/home'); 
       } 
       }
    catch (error) {
     if(error.response && ( error.response.status===400) || error.response.status===401){
-      toast.error("Provide valid credentials")
+      toast.error(error.response.data.message, { autoClose: 3000 })
     }
     else {
-      toast.error("An error occurred. Please try again.");
+      toast.error("An error occurred. Please try again."), { autoClose: 3000 };
     }
       console.log(error)
     } 
@@ -93,7 +94,9 @@ const LoginForm = () => {
     const handleSignup=()=>{
       navigate('/signup')
     }
-
+  const handleForgotPassword=()=>{
+    navigate('/forgot-password')
+  }
 
 
   return (
@@ -105,8 +108,8 @@ const LoginForm = () => {
             <input type='text' name='username' placeholder='Your Username' onChange={(event)=>setUsername(event.target.value)}/>
             <input type='text' name="password" placeholder='Password' onChange={(event)=>setPassword(event.target.value)}/>
             <button type='submit'onClick={handleLogin}>Log In</button>
-            <a><p>Forgot Password? </p></a>
-            <p className='signup-link' onClick={handleSignup} >New to Debug Media? Sign up now.</p>
+            <a onClick={handleForgotPassword}><p>Forgot Password? </p> </a>
+            <p className='signup-link' onClick={handleSignup} >New to Film Connect? Sign up now.</p>
           </div>
         </div>
       </div>

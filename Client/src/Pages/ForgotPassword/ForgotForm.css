@@ -1,0 +1,58 @@
+.forgot-div{
+    background-color: lch(99 0.75 19.19);
+    min-height: 100vh;
+}
+.forgot-form{
+    margin: 50px;
+    padding: 20px;
+}
+.forgot-form h1{text-align: center;
+    font-size: 40px;
+}
+
+
+.forgot-items{
+    display: flex;
+        flex-direction: column;
+        height: 400px;
+        align-items: center;
+        padding: 20px;
+        justify-content: center;
+
+}
+
+.email-section{
+    flex-direction: column;
+    width: 300px;
+    display: flex;
+    padding: 20px;
+    border: 1px solid black;
+   border-radius: 10px;
+   box-shadow: 2px 2px 5px #000000;
+   min-height: 300px;
+
+}
+
+.email-section input{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.email-section label{
+    font-size: 16px;
+    color: black;
+}
+
+
+.check-email-btn{
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    align-self: center;
+    background-color: #0a0a0a;
+    color: white;
+}
+
+.check-email-btn:hover{
+    background-color: rgb(207, 86, 86);
+}

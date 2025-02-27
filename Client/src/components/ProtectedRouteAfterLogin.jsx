@@ -4,16 +4,16 @@ import { AuthContext } from '../context/AuthContext'
 
 const ProtectedRouteAfterLogin = () => {
         const {auth}=useContext(AuthContext);
-
-        if(auth) 
-         {
-          return <Navigate to='/home' replace/>
-        }
-        else 
+        const location=useLocation();
+        console.log("ProtectedRouteAfterLogin - auth:", auth);
+        if(auth===true) 
         {
-        return <Outlet/>
+         return <Navigate to='/home' state={{ from: location }}  replace/>
         }
- 
+         else
+         {
+         return <Outlet/>
+        }
 }
 
 export default ProtectedRouteAfterLogin;

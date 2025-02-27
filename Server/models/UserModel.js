@@ -27,10 +27,11 @@ const userSchema=mongoose.Schema({
     watchLater: [{ 
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'Movie'
-     }]
-
+     }],
+     role: { type: String, default: 'user' },
+    
 });
 
 
-const User=mongoose.model("User", userSchema);
+const User=mongoose.models.User || mongoose.model("User", userSchema);
 module.exports=User;

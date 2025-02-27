@@ -1,10 +1,9 @@
 import { createContext, useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [auth, setAuth] = useState(null);
+    const [auth, setAuth] = useState(false);
 
     useEffect(() => {
         const token= localStorage.getItem("token");

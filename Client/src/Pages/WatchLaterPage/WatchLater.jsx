@@ -3,7 +3,6 @@ import './Watchlater.css';
 import axios from 'axios';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-const API_URL="http://localhost:3006";
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { CiBookmarkRemove } from "react-icons/ci";
 import { WatchlaterContext } from '../../context/WatchLaterContext';
@@ -12,6 +11,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import SideBarWrapper from '../../components/Sidebar/SideBarWrapper';
 
+
+const API_URL =import.meta.env.VITE_API_URL;
 const Watchlater = () => {
      const [movies, setMovies]=useState([]);
      const navigate=useNavigate();
@@ -95,7 +96,7 @@ const handleRemoveWatchLater= async(id)=>
         <div className='watch-later-content'>
         {movies.length > 0 ? ( movies.map((movie)=> (
                  <div className='movie-cards' key={movie._id}>
-                     <img src={`http://localhost:3006${movie.imageUrl}`} alt='movie.title' className='movie-image' onError={(e) => e.target.src = '/delete.png'}/>
+                     <img src={`${API_URL}${movie.imageUrl}`} alt='movie.title' className='movie-image' onError={(e) => e.target.src = '/delete.png'}/>
                      <h1>{movie.title}</h1>
                      -----------------------------
                      <p>Rating : {getStars(movie.rating)}</p>

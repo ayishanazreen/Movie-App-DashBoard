@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './SignupForm.css'
 import axios from 'axios';
+import { toast } from 'react-toastify';
 const API_URL =import.meta.env.VITE_API_URL;
 
 export const SignupForm = () => {
@@ -14,7 +15,7 @@ export const SignupForm = () => {
  
     const handleSignup = async()=>{
       try {
-      const response=await axios.post(`${API_URL}/users/signup`, {
+      const response=await axios.post(`${API_URL}/signup`, {
         name,
         email,
         username,
@@ -24,7 +25,7 @@ export const SignupForm = () => {
         navigate("/home");
       }
       } catch (error) {
-        res.status(500).json({message:"server error"})
+       toast.error("server error")
       }
 
     }

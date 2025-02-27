@@ -8,7 +8,9 @@ import { AuthContext } from '../../context/AuthContext';
 
 const Sidebar = ({visible, handleDisable}) => {
   const [focusedItem, setFocusedItem]=useState(null);
-  const menuItems=['Home', 'Add Movie', 'Add Genre', 'Watch Later', 'Logout']
+  const adminMenuItems=['Home', 'Add Movie', 'Add Genre', 'Logout']
+  const userMenuItems=['Home','Watch Later', 'Logout']
+  const role=localStorage.getItem("role");
   const navigate=useNavigate();
   const {logout}=useContext(AuthContext);
 
@@ -28,7 +30,7 @@ const Sidebar = ({visible, handleDisable}) => {
     }
     else if (menu ==='Logout'){
       logout();
-      navigate('/login')
+      navigate('/')
     }
   };
   return (
@@ -37,9 +39,11 @@ const Sidebar = ({visible, handleDisable}) => {
     <button className="close-btn" onClick={handleDisable}><CiBoxList size={60} /></button>
          <aside className="sidebar">
           <ul>
-            {menuItems.map((menu, index)=> (
+            {role === 'user'? userMenuItems.map((menu, index)=> (
               <li key={index} className={focusedItem === menu? "focused" : ""} onClick={()=>handleMenuClick(menu)}>{menu}</li>
-            ))}
+            )) : adminMenuItems.map((menu, index)=> (
+              <li key={index} className={focusedItem === menu? "focused" : ""} onClick={()=>handleMenuClick(menu)}>{menu}</li>
+            )) }
           </ul>
     </aside>
   </div>

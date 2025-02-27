@@ -1,4 +1,5 @@
-const jwt=require("jsonwebtoken")
+const jwt=require("jsonwebtoken");
+const User = require("../models/UserModel");
 
  const checkAuth=(req,res, next)=>{
     try {
@@ -22,4 +23,19 @@ const jwt=require("jsonwebtoken")
     }
 
 }
-module.exports={checkAuth}
+
+const verifyRole=async(req,res,next)=>{
+    try {
+        const user=await User.findById(req.userId);
+        if(!user || user.role !=="admin"){
+            return res.status(403).json({message:"Only Admins are allowed"})
+        }
+        next();
+        
+    } catch (error) {
+        res.status(500).json({ message: "Server Error" });
+    }
+
+}
+
+module.exports={checkAuth, verifyRole}

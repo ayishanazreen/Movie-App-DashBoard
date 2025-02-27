@@ -2,6 +2,7 @@ const express=require("express")
 const router=express.Router();
 const Movie = require("../models/movieModel");
 const multer=require("multer");
+const { checkAuth, verifyRole } = require("../midleware/checkAuth");
 
 
 const storage = multer.diskStorage({
@@ -17,10 +18,7 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage })
 
 
-
-
-
-router.post('/',upload.single('image'), async(req,res)=>{
+router.post('/' ,upload.single('image'), async(req,res)=>{
     try {
     const {title, rating, genre}=req.body;
     const image=req.file? `/images/${req.file.filename}` : null;

@@ -23,7 +23,7 @@ app.use('/home', homeRouter);
 app.use('/genre', genreRouter);
 
 
-app.use('/users', userRouter);
+app.use('/', userRouter);
 
 
 

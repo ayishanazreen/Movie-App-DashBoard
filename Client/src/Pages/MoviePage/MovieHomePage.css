@@ -36,7 +36,7 @@
     color:  #b1a0a0ba;
     position: absolute;
     z-index: 1;
-    margin-top: 450px;
+    top: 600px;
     padding: 10px;
     font-size: 35px;
     font-family: sans-serif;
