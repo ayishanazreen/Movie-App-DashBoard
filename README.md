@@ -20,8 +20,12 @@ This is a full-stack movie app built with the MERN stack and developed using the
 
 📊 Movie Dashboard
 
-📃Pagination and filter $ sorting technique in movies
+🎬 Pagination & Filtering in Movies: Implementing pagination and filtering enhances the user experience by efficiently managing movie lists.
 
+    📌 Pagination: Splits movies into pages, reducing load time and improving navigation.
+    🔍 Filtering: Allows users to refine movie lists based on criteria like genre and ratings.
+
+🔒 Forgot Password: If a user forgets their password, they can reset it by entering the reset code sent to their registered email at the time of signup, along with a new password.
 
 <h3>🛠️ Technologies Used</h3>
 
@@ -35,6 +39,10 @@ Axios (API Requests)
 
 React Router (Navigation)
 
+React-toastify
+
+React-icons
+
 <h4>Backend:</h4>
 
 Node.js & Express.js (Server & API Development)
@@ -43,115 +51,72 @@ MongoDB (Database for user details and movies)
 
 JWT Authentication (User Login System)
 
-<h2>🎯 Installation & Setup</h2>
+Bcrypt (Password hashing)
 
-Prerequisites:
+Nodemailer (Sending emails)
 
-Node.js installed on your system
-
-MongoDB (For saving user data locally)
-
-1️⃣ Clone the Repository
-
- git clone https://github.com/your-username/movie-dashboard.git
- 
- cd movie-dashboard
-
-2️⃣ Install Dependencies
-
-Frontend:
-
- cd frontend
- npm install
-
-Backend:
-
- cd backend
- npm install
-
-3️⃣ Setup Environment Variables
-
-Create a .env file in the backend directory and add:
-
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-TMDB_API_KEY=your_tmdb_api_key
-
-4️⃣ Run the Application
-
-Start the Backend Server:
-
- cd backend
- npm start
-
-Start the Frontend:
-
- cd frontend
- npm start
- 
 
 <h2>📸 Screenshots</h2>
 
  <h3>Login Page</h3>
  
 
- ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/login.png?raw=true)
+ ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/screenshots/login.png?raw=true)
 
  <h3>Sign up Page</h3>
  
 
-  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/signup.png?raw=true)
+  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/screenshots/signup.png?raw=true)
 
   <h3>Home Page</h3>
   
   
-  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/homePage.png?raw=true)
+  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/screenshots/homePage.png?raw=true)
 
   
   <h3>Dashboard for Adding Movies </h3>
   
   
-  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/AddMovie.png?raw=true)
+  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/screenshots/AddMovie.png?raw=true)
 
 
-  <h3>fill the form with movie details.</h3>
+  <h3>Fill the form with movie details.</h3>
   
 
-  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/AddMovieForm.png?raw=true)
+  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/screenshots/AddMovieForm.png?raw=true)
 
-   <h3>Can also add genres</h3>
+   <h3>Dashboard for adding Genres</h3>
    
    
-  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/AddGenre.png?raw=true)
+  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/a9300953394cdaac9ccedf2871332ad084d61064/AddGenre.png?raw=true)
 
-   <h3>View of added movies in Home Page of a logged User </h3>
+   <h3>View of added movies in Home Page of a Admin User </h3>
    
 
- ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/showMovies.png?raw=true)
+ ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/screenshots/showMovies.png?raw=true)
 
   <h3>Add the movie into Home Page</h3>
   
 
- ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/watchLater.png?raw=true)
+ ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/screenshots/watchLater.png?raw=true)
 
 
 
-  <h3>The whole Home pag after adding a new movie </h3>
+  <h3>The whole Home page after adding a new movie </h3>
   
 
- ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/finalHome.png?raw=true)
+ ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/screenshots/finalHome.png?raw=true)
 
 
   <h3>Each movie can edit and delete option </h3>
   
 
- ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/EditMovie.png?raw=true)
+ ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/screenshots/EditMovie.png?raw=true)
 
  <h3>Filter the movies based on genres and star ratings and incorporate Pagination logic</h3>
 
  
-  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/addFilterLogic.png?raw=true)
+  ![screenshots](https://github.com/ayishanazreen/Movie-App-DashBoard/blob/master/screenshots/addFilterLogic.png?raw=true)
   
 
  
